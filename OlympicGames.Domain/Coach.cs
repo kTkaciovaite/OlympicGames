@@ -2,6 +2,7 @@
 {
     public class Coach : Person
     {
+        public int Id { get; set; }
         public string Nationality { get; set; }
 
         public override string Summary()

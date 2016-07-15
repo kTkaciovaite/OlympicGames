@@ -2,6 +2,7 @@
 {
     public class Sportsperson : Person
     {
+        public int Id { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
 

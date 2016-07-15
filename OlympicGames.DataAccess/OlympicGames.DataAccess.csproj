@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B181EA0D-DC4F-4F96-91E9-B03003F69D69}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{DE1C9134-C4FD-4E55-8587-145FB48C4E8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OlympicGames.Console</RootNamespace>
-    <AssemblyName>OlympicGames.Console</AssemblyName>
+    <RootNamespace>OlympicGames.DataAccess</RootNamespace>
+    <AssemblyName>OlympicGames.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -52,7 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ArticleDataService.cs" />
+    <Compile Include="CountryDataService.cs" />
+    <Compile Include="OlympicGamesContext.cs" />
+    <Compile Include="OlympicGamesInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,10 +60,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OlympicGames.DataAccess\OlympicGames.DataAccess.csproj">
-      <Project>{de1c9134-c4fd-4e55-8587-145fb48c4e8e}</Project>
-      <Name>OlympicGames.DataAccess</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OlympicGames.Domain\OlympicGames.Domain.csproj">
       <Project>{a5d10c76-c30a-4df5-8e76-fc95d11e49b3}</Project>
       <Name>OlympicGames.Domain</Name>
